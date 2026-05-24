@@ -4,7 +4,7 @@ export function register() {
     
     <main class="grid min-h-screen lg:grid-cols-[0.95fr_1.05fr]">
       <section class="hidden border-r border-blue-100 bg-blue-600 p-10 text-white lg:flex lg:flex-col lg:justify-between">
-        <a class="text-xl font-black tracking-tight" id="btn-home">TaskFlowSPA</a>
+        <a class="text-xl font-black tracking-tight cursor-pointer" id="btn-home">TaskFlowSPA</a>
         <div>
           <p class="text-sm font-semibold uppercase tracking-[0.3em] text-blue-100">Nuevo usuario</p>
           <h1 class="mt-4 text-5xl font-black tracking-tight">Crea tu cuenta y empieza a organizar tu flujo.</h1>
@@ -22,7 +22,7 @@ export function register() {
               <p class="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600">Registro</p>
               <h2 class="mt-2 text-3xl font-black text-slate-900">Crear cuenta</h2>
             </div>
-            <a class="rounded-full border border-blue-200 px-4 py-2 text-sm font-semibold text-blue-700 hover:bg-blue-50" id="btn-login">Ya tengo cuenta</a>
+            <a class="rounded-full border border-blue-200 px-4 py-2 text-sm font-semibold text-blue-700 hover:bg-blue-50 cursor-pointer" id="btn-login">Ya tengo cuenta</a>
           </div>
 
           <form class="mt-8 grid gap-5">
@@ -56,7 +56,7 @@ export function register() {
               </div>
             </div>
 
-            <a class="inline-flex items-center justify-center rounded-2xl bg-blue-600 px-5 py-3 text-sm font-bold text-white hover:bg-blue-500">
+            <a class="inline-flex items-center justify-center rounded-2xl bg-blue-600 px-5 py-3 text-sm font-bold text-white hover:bg-blue-500 cursor-pointer">
               Registrarme
             </a>
           </form>

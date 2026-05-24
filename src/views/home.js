@@ -3,11 +3,11 @@ export function home() {
   return `
     <header class="border-b border-blue-100 bg-white/90 backdrop-blur">
       <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a class="text-xl font-black tracking-tight text-blue-900" id="btn-home" >TaskFlowSPA</a>
+        <a class="text-xl font-black tracking-tight text-blue-900 cursor-pointer" id="btn-home" >TaskFlowSPA</a>
         <nav class="hidden items-center gap-3 md:flex">
-          <a class="rounded-full px-4 py-2 text-sm font-semibold text-slate-600 hover:bg-blue-50 hover:text-blue-700" >Inicio</a>
-          <a class="rounded-full px-4 py-2 text-sm font-semibold text-slate-600 hover:bg-blue-50 hover:text-blue-700"  id="iniciar">Entrar</a>
-          <a class="rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-500" id="registrar" >Registrarse</a>
+          <a class="rounded-full px-4 py-2 text-sm font-semibold text-slate-600 hover:bg-blue-50 hover:text-blue-700 cursor-pointer" >Inicio</a>
+          <a class="rounded-full px-4 py-2 text-sm font-semibold text-slate-600 hover:bg-blue-50 hover:text-blue-700 cursor-pointer"  id="iniciar">Entrar</a>
+          <a class="rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-500 cursor-pointer" id="registrar" >Registrarse</a>
         </nav>
       </div>
     </header>
@@ -24,8 +24,8 @@ export function home() {
             luego en una SPA real con autenticacion, roles, permisos y CRUD de tareas.
           </p>
           <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a class="inline-flex items-center justify-center rounded-2xl bg-blue-600 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-blue-200 hover:bg-blue-500" id="btn-iniciar" >Iniciar sesion</a>
-            <a class="inline-flex items-center justify-center rounded-2xl border border-blue-200 bg-white px-6 py-3 text-sm font-bold text-blue-700 hover:bg-blue-50" id="btn-registrar">Crear cuenta</a>
+            <a class="inline-flex items-center justify-center rounded-2xl bg-blue-600 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-blue-200 hover:bg-blue-500 cursor-pointer" id="btn-iniciar" >Iniciar sesion</a>
+            <a class="inline-flex items-center justify-center rounded-2xl border border-blue-200 bg-white px-6 py-3 text-sm font-bold text-blue-700 hover:bg-blue-50 cursor-pointer" id="btn-registrar">Crear cuenta</a>
           </div>
         </div>
 
