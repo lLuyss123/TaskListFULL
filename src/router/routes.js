@@ -1,6 +1,7 @@
 import { home, homeEvents } from "../views/home.js";
 import { Login, loginEvents } from "../views/login.js";
 import { register, registerEvents } from "../views/register.js";
+import { notFound, notFoundEvents } from "../views/not-found.js";
 
 const app = document.getElementById("app");
 
@@ -26,8 +27,8 @@ export function router() {
   const route = routes[path];
 
   if (!route){
-    console.log("no existe");
-    
+    app.innerHTML= notFound()
+    notFoundEvents()
   }else{
     app.innerHTML = route.render();
     route.events();

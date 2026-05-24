@@ -1,10 +1,10 @@
 import { navigateTo } from "../router/routes.js";
-export function register(){
-    return `
+export function register() {
+  return `
     
     <main class="grid min-h-screen lg:grid-cols-[0.95fr_1.05fr]">
       <section class="hidden border-r border-blue-100 bg-blue-600 p-10 text-white lg:flex lg:flex-col lg:justify-between">
-        <a class="text-xl font-black tracking-tight" >TaskFlowSPA</a>
+        <a class="text-xl font-black tracking-tight" id="btn-home">TaskFlowSPA</a>
         <div>
           <p class="text-sm font-semibold uppercase tracking-[0.3em] text-blue-100">Nuevo usuario</p>
           <h1 class="mt-4 text-5xl font-black tracking-tight">Crea tu cuenta y empieza a organizar tu flujo.</h1>
@@ -64,14 +64,18 @@ export function register(){
       </section>
     </main>
 
-    `
+    `;
 }
 
-export function registerEvents(){
-    const btnLogin= document.getElementById("btn-login")
-    if (btnLogin) {
-      btnLogin.addEventListener("click",()=>{
-        navigateTo("/login")
-      })
-    }
+export function registerEvents() {
+  const btnLogin = document.getElementById("btn-login");
+  const home = document.getElementById("btn-home");
+  if (btnLogin) {
+    btnLogin.addEventListener("click", () => {
+      navigateTo("/login");
+    });
+    home.addEventListener("click", () => {
+      navigateTo("/");
+    });
+  }
 }
