@@ -2,6 +2,7 @@
 import { json } from "stream/consumers";
 import Users from "../data/db.json" with {type:"json"};
 import fs from "fs";
+import { error } from "console";
 const rutaDB = '../Backend/src/data/db.json'
 
 
@@ -53,10 +54,14 @@ const getUserById = async (id) => {
  * Retorna el usuario creado
  */
 const createUser = async (newUser) => {
-
+    for (const element of Users) {
+        if (newUser["userEmail"] == element["userEmail"]) {
+            throw new Error("El correo ya existe");
+        }
+    }
     const user = {
-
-        id: Users.at(-1).id + 1,
+        
+        id: Users.at(-1).id+1,
 
         ...newUser
     };

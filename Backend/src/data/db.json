@@ -8,6 +8,7 @@
         "rol": "USER",
         "tasks": [
             {
+                "id": "1",
                 "taskName": "",
                 "taskDescription": "",
                 "statusTask": ""

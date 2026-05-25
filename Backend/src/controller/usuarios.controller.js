@@ -58,7 +58,7 @@ const getUser = async (req, res) => {
 
             return res.status(404).json({
                 success: false,
-                message: "Personaje no encontrado"
+                message: "Usuario no encontrado"
             });
         }
 
@@ -128,7 +128,7 @@ const updateUser = async (req, res) => {
 
             return res.status(404).json({
                 success: false,
-                message: "Personaje no encontrado"
+                message: "Usuario no encontrado"
             });
         }
 
@@ -168,13 +168,13 @@ const deleteUser = async (req, res) => {
 
             return res.status(404).json({
                 success: false,
-                message: "Personaje no encontrado"
+                message: "Usuario no encontrado"
             });
         }
 
         return res.status(200).json({
             success: true,
-            message: "Personaje eliminado",
+            message: "Usuario eliminado",
             body: deletedUser
         });
 
