@@ -1,0 +1,17 @@
+[
+    {
+        "id": 2,
+        "userName": "Luis",
+        "userLastname": "Mejia",
+        "userEmail": "luismejia@mail.com",
+        "password": "12345",
+        "rol": "USER",
+        "tasks": [
+            {
+                "taskName": "",
+                "taskDescription": "",
+                "statusTask": ""
+            }
+        ]
+    }
+]

@@ -3,5 +3,3 @@ import { router } from "./router/routes.js";
 
 router();
 
-window.addEventListener("popstate", router);
-
