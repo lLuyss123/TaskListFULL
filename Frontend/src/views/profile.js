@@ -1,4 +1,4 @@
-export function profile(){
+export function profile() {
   return `
   
     <header class="border-b border-blue-100 bg-white/90 backdrop-blur">
@@ -14,13 +14,13 @@ export function profile(){
 
     <main class="mx-auto max-w-5xl px-6 py-10">
       <section class="grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
-        <aside class="rounded-[2rem] bg-blue-600 p-8 text-white shadow-xl shadow-blue-100">
+        <aside class="rounded-4xl bg-blue-600 p-8 text-white shadow-xl shadow-blue-100">
           <p class="text-sm font-semibold uppercase tracking-[0.3em] text-blue-100">Cuenta</p>
           <h1 class="mt-3 text-4xl font-black tracking-tight">Mi perfil</h1>
           <p class="mt-4 text-blue-50">El usuario puede actualizar sus datos personales y gestionar su propia cuenta dentro del sistema.</p>
         </aside>
 
-        <section class="rounded-[2rem] border border-blue-100 bg-white p-8 shadow-xl shadow-blue-50">
+        <section class="rounded-4xl border border-blue-100 bg-white p-8 shadow-xl shadow-blue-50">
           <form class="grid gap-5">
             <div>
               <label class="mb-2 block text-sm font-medium text-slate-700" for="name">Nombre</label>

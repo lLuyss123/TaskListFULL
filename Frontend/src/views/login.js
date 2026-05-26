@@ -1,9 +1,10 @@
 import { navigateTo } from "../router/routes.js";
+import { validateLogin } from "../services/login.js";
 export function Login() {
   return `
     <main class="grid min-h-screen lg:grid-cols-[1fr_0.95fr]">
       <section class="flex items-center justify-center px-6 py-10">
-        <div class="w-full max-w-xl rounded-[2rem] border border-blue-100 bg-white p-8 shadow-xl shadow-blue-100/70">
+        <div class="w-full max-w-xl rounded-4xl border border-blue-100 bg-white p-8 shadow-xl shadow-blue-100/70">
           <div class="flex items-center justify-between">
             <a class="text-xl font-black tracking-tight text-blue-900 cursor-pointer" id="btn-home">TaskFlowSPA</a>
             <a class="rounded-full border border-blue-200 px-4 py-2 text-sm font-semibold text-blue-700 hover:bg-blue-50 cursor-pointer" id="registrar">Registrarse</a>
@@ -15,16 +16,16 @@ export function Login() {
             <p class="mt-4 text-slate-600">Ingresa a tu espacio de trabajo y continua organizando tus tareas.</p>
           </div>
 
-          <form class="mt-8 grid gap-5">
+          <form class="mt-8 grid gap-5" id="formLogin">
             <div>
               <label class="mb-2 block text-sm font-medium text-slate-700" for="email">Correo</label>
-              <input id="email" type="email" placeholder="usuario@taskflow.com" class="w-full rounded-2xl border border-blue-100 bg-blue-50 px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:border-blue-400 focus:outline-none" />
+              <input name="email" id="email" type="email" placeholder="usuario@taskflow.com" class="w-full rounded-2xl border border-blue-100 bg-blue-50 px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:border-blue-400 focus:outline-none" />
             </div>
             <div>
               <label class="mb-2 block text-sm font-medium text-slate-700" for="password">Contrasena</label>
-              <input id="password" type="password" placeholder="Ingresa tu contrasena" class="w-full rounded-2xl border border-blue-100 bg-blue-50 px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:border-blue-400 focus:outline-none" />
+              <input name="password" id="password" type="password" placeholder="Ingresa tu contrasena" class="w-full rounded-2xl border border-blue-100 bg-blue-50 px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:border-blue-400 focus:outline-none" />
             </div>
-            <a class="inline-flex items-center justify-center rounded-2xl bg-blue-600 px-5 py-3 text-sm font-bold text-white hover:bg-blue-500 cursor-pointer" >
+            <a id="login"class="inline-flex items-center justify-center rounded-2xl bg-blue-600 px-5 py-3 text-sm font-bold text-white hover:bg-blue-500 cursor-pointer" >
               Entrar al dashboard
             </a>
           </form>
@@ -49,13 +50,33 @@ export function Login() {
 export function loginEvents() {
   const home = document.getElementById("btn-home");
   const btnRegistrar = document.getElementById("registrar");
-
-  if (btnRegistrar || home) {
+  const btnLogin = document.querySelector("#login")
+  const formLogin = document.querySelector("#formLogin")
+  if (formLogin) {
+    formLogin.addEventListener("submit", (e) => e.preventDefault())
+  }
+  if (btnLogin) {
+    btnLogin.addEventListener("click", async () => {
+      const data = new FormData(formLogin)
+      const user = Object.fromEntries(data)
+      const response = await validateLogin(user)
+      if (response) {
+        sessionStorage.setItem("userId", response[0].id)
+        navigateTo("/dashboard")
+      }
+    })
+  }
+  if (btnRegistrar) {
     btnRegistrar.addEventListener("click", () => {
       navigateTo("/register");
     });
+    return // early return
+  }
+  if (home) {
     home.addEventListener("click", () => {
       navigateTo("/");
     });
+    return
   }
 }
+

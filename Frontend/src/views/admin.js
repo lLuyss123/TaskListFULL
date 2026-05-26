@@ -14,7 +14,7 @@ export function admin(){
     </header>
 
     <main class="mx-auto max-w-7xl px-6 py-10">
-      <section class="rounded-[2rem] bg-blue-600 px-8 py-10 text-white shadow-xl shadow-blue-100">
+      <section class="rounded-4xl bg-blue-600 px-8 py-10 text-white shadow-xl shadow-blue-100">
         <p class="text-sm font-semibold uppercase tracking-[0.3em] text-blue-100">Rol administrador</p>
         <h1 class="mt-3 text-4xl font-black tracking-tight">Panel administrativo</h1>
         <p class="mt-4 max-w-2xl text-blue-50">Vista reservada para gestionar usuarios, roles, permisos y monitoreo general del sistema.</p>

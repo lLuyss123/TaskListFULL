@@ -29,7 +29,7 @@ export function home() {
           </div>
         </div>
 
-        <section class="rounded-[2rem] border border-blue-100 bg-white p-8 shadow-xl shadow-blue-100/70">
+        <section class="rounded-4xl border border-blue-100 bg-white p-8 shadow-xl shadow-blue-100/70">
           <h2 class="text-2xl font-bold text-slate-900">Vistas del proyecto</h2>
           <div class="mt-6 grid gap-4 sm:grid-cols-2">
             <a class="rounded-3xl bg-sky-50 p-5 hover:bg-sky-100" >
