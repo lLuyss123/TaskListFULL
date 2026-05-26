@@ -1,0 +1,41 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "userName": "Luis",
+      "userLastname": "Mejia",
+      "userEmail": "t@t.com",
+      "password": "asd",
+      "rol": "USER",
+      "tasks": [
+        {
+          "id": "1",
+          "taskName": "",
+          "taskDescription": "",
+          "statusTask": ""
+        }
+      ]
+    }, {
+      "id": 2,
+      "userName": "Luis 2",
+      "userLastname": "Mejia",
+      "userEmail": "t@t.com",
+      "password": "asddd",
+      "rol": "USER",
+      "tasks": [
+        {
+          "id": "1",
+          "taskName": "",
+          "taskDescription": "",
+          "statusTask": "completed"
+        },
+         {
+          "id": "2",
+          "taskName": "",
+          "taskDescription": "",
+          "statusTask": "active"
+        }
+      ]
+    }
+  ]
+}
